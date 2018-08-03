@@ -12,7 +12,7 @@ import WebKit
 class Detail: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     @IBOutlet weak var content: WKWebView!
-    var result: ghost? { didSet { configureView() }}
+    var result: Ghost? { didSet { configureView() }}
     
     func configureView() {
         if let result = result { title = result.name }}
@@ -27,8 +27,7 @@ class Detail: UIViewController, WKUIDelegate, WKNavigationDelegate {
         let url = Bundle.main.url(forResource: result?.id, withExtension: "html", subdirectory: "location".localized)!
         let request = URLRequest(url: url)
         content.loadFileURL(url, allowingReadAccessTo: url)
-        content.load(request)
-        
+        content.load(request)   
     }
     
     override func didReceiveMemoryWarning() {

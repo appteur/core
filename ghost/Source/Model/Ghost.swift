@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct ghost {
+struct Ghost {
     let name : String
     let sort : String
-    let id : String }
+    let id : String
+}
